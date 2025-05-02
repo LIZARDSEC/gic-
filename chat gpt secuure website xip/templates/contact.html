@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | GIC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      margin: 0 15px;
+      color: #004aad;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #004aad, #007bff);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .contact-item {
+      flex: 1 1 300px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .contact-item h3 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    .contact-item p, .contact-item a {
+      font-size: 1em;
+      line-height: 1.5;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .social-icons a {
+      font-size: 1.5em;
+      margin: 0 10px;
+      color: #004aad;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    form {
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.2);
+      outline: none;
+    }
+
+    button {
+      background: #004aad;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .contact-details {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="gic-logo.jpg" alt="GIC Logo">
+    <strong>WELCOME TO GIC</strong>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="security.html">Benefits</a>
+    <a href="contact.html">Contact us</a>
+    <a href="protype.html">Card</a>
+    <a href="joinus.html" class="cta">Join Us</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Contact GIC</h1>
+  <p>We're here to assist you. Connect with us through any of the channels below.</p>
+</section>
+
+<section class="contact-details">
+  <div class="contact-item">
+    <h3>General Inquiries</h3>
+    <p>Email: <a href="mailto:global.identity.card.2025@gmail.com">global.identity.card.2025@gmail.com</a></p>
+    <p>Phone1: +91-6291031721</p>
+    <p>Phone2: +91-7888061444</p>
+  </div>
+
+  <div class="contact-item">
+    <h3>Head Office</h3>
+    <p>Raj tower, Raj Royal city, Vedant nagar, Malegaon road, nanded, maharashtra</p>
+    <p>ZIP CODE- 431601 </p>
+  </div>
+
+  <div class="contact-item">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 style="text-align:center;">Send Us a Message</h2>
+  <form action="https://formspree.io/f/manoqraj" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+    <button type="submit">Submit Message</button>
+  </form>
+</section>
+
+</body>
+</html>
